@@ -11,7 +11,7 @@ public class SalaryCalculator {
         } else if (salary > 20000) {
             taxRate = 0.20;
         }
-        double netIncome = salary * taxRate;
+        double netIncome = salary * (1 - taxRate);
         System.out.println(netIncome);
     }
 }
