@@ -4,14 +4,15 @@ public class SalaryCalculator {
     public void calculateSalary(int salary) {
         if (salary < 0) {
             System.out.println("wrong input!");
+            return;
         }
-        double taxRate = 0.15;
+        float taxRate = 0.15f;
         if (salary > 10000 && salary <= 20000) {
-            taxRate = 0.18;
+            taxRate = 0.18f;
         } else if (salary > 20000) {
-            taxRate = 0.20;
+            taxRate = 0.20f;
         }
-        double netIncome = salary * (1 - taxRate);
+        float netIncome = salary * (1 - taxRate);
         System.out.println(netIncome);
     }
 }
